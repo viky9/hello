@@ -1,0 +1,40 @@
+insert into table preference  values(1,"52251429,")
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(30) NOT NULL,
+  `userEmail` varchar(60) NOT NULL,
+  `userPass` varchar(255) NOT NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE KEY `userEmail` (`userEmail`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+
+kwargs2['unix_socket'] = '/opt/lampp/var/mysql/mysql.sock'
+super(Connection, self).__init__(*args, **kwargs2)
+socket=/opt/lampp/var/mysql/mysql.sock
+
+
+
+INSERT INTO buying_list(pref_Products) VALUES('65247087,74567783,74668272,76074216,77280108,77280143');
+INSERT INTO buying_list(pref_Products) VALUES('77280206,77453671,77453728,77453757,77453774,77453861');
+
+
+
+<?php 
+require_once('dbconnect.php');  
+ $sql="SELECT * FROM  users";
+
+ $result = mysql_query($sql);
+ //echo [$result];
+while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    //print_r($row);
+    echo "<br><h1>user Email</h1>";
+    echo $row['userEmail'];
+    echo "<br>";
+    echo $row['userId'];
+    echo "<br>";
+    echo $row['userName'];
+    echo "<br>";
+}
